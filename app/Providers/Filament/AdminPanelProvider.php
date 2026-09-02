@@ -14,11 +14,13 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->databaseNotifications()
             ->spa();
 
         $panel = filament_branding($panel);
         $panel = filament_discovery($panel);
         $panel = filament_panel_middleware($panel);
+
 
         return $panel;
     }
