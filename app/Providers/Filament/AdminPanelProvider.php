@@ -20,6 +20,7 @@ class AdminPanelProvider extends PanelProvider
         $panel = filament_branding($panel);
         $panel = filament_discovery($panel);
         $panel = filament_panel_middleware($panel);
+        $panel = filament_antivirus($panel);
 
 
         return $panel;

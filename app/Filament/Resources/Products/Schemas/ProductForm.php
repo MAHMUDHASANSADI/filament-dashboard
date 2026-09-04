@@ -7,6 +7,8 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\FileUpload;
+use JohnRivera7\FilamentAntivirus\Rules\AntivirusFileRule;
 
 class ProductForm
 {
@@ -35,6 +37,8 @@ class ProductForm
                     ->required()
                     ->numeric()
                     ->default(0),
+                FileUpload::make('document')
+                    ->rules([new AntivirusFileRule()]),
                 Toggle::make('is_active')
                     ->required(),
             ]);

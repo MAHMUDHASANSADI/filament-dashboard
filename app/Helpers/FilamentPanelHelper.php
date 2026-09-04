@@ -14,6 +14,7 @@ use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use JohnRivera7\FilamentAntivirus\FilamentAntivirusPlugin;
 
 /**
  * Configure branding settings: favicon, and color scheme.
@@ -59,5 +60,17 @@ function filament_panel_middleware(Panel $panel): Panel
         ])
         ->authMiddleware([
             Authenticate::class,
+        ]);
+}
+
+function filament_antivirus(Panel $panel): Panel
+{
+    return $panel
+        ->plugins([
+            FilamentAntivirusPlugin::make()
+                ->navigationGroup('Configuraciones')
+                ->navigationLabel('Antivirus')
+                ->navigationSort(7)
+            //->permission(fn(): bool => auth()->user()?->hasAnyRole(['super_admin', 'admin']) ?? false),
         ]);
 }
