@@ -14,6 +14,7 @@ use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Rmsramos\Activitylog\ActivitylogPlugin;
 
 /**
  * Configure branding settings: favicon, and color scheme.
@@ -59,5 +60,16 @@ function filament_panel_middleware(Panel $panel): Panel
         ])
         ->authMiddleware([
             Authenticate::class,
+        ]);
+}
+
+function filament_activitylog(Panel $panel): Panel
+{
+    return $panel
+        ->plugins([
+            ActivitylogPlugin::make()
+                ->navigationGroup('System')
+                ->navigationIcon('heroicon-o-shield-check')
+                ->navigationSort(8),
         ]);
 }
