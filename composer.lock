@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39dcb9bdbb4fab3a3a957d6a6915a2a9",
+    "content-hash": "50703e9d08b988ebd08b84ca3b7b6b5f",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -2022,6 +2022,72 @@
                 }
             ],
             "time": "2026-08-24T17:13:02+00:00"
+        },
+        {
+            "name": "johnrivera7/filament-cybersecurity",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Johnrivera7/filament-cybersecurity.git",
+                "reference": "f6312d472206d290c367010c5b09b1f5ad14895b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Johnrivera7/filament-cybersecurity/zipball/f6312d472206d290c367010c5b09b1f5ad14895b",
+                "reference": "f6312d472206d290c367010c5b09b1f5ad14895b",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/contracts": "^11.28|^12.0|^13.0",
+                "illuminate/support": "^11.28|^12.0|^13.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.16",
+                "symfony/process": "^6.4|^7.0|^8.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.18",
+                "phpunit/phpunit": "^11.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JohnRivera7\\FilamentCybersecurity\\FilamentCybersecurityServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JohnRivera7\\FilamentCybersecurity\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Rivera",
+                    "email": "johnriveragonzalez7@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Filament Cybersecurity Dashboard — audit .env, routes, workers, Redis, PHP/Laravel posture and dependency advisories.",
+            "homepage": "https://github.com/Johnrivera7/filament-cybersecurity",
+            "keywords": [
+                "cybersecurity",
+                "filament",
+                "filament-plugin",
+                "laravel",
+                "security",
+                "security-audit"
+            ],
+            "support": {
+                "issues": "https://github.com/Johnrivera7/filament-cybersecurity/issues",
+                "source": "https://github.com/Johnrivera7/filament-cybersecurity/tree/v1.3.0"
+            },
+            "time": "2026-08-28T18:12:40+00:00"
         },
         {
             "name": "kirschbaum-development/eloquent-power-joins",

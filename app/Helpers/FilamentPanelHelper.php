@@ -14,6 +14,7 @@ use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use JohnRivera7\FilamentCybersecurity\FilamentCybersecurityPlugin;
 
 /**
  * Configure branding settings: favicon, and color scheme.
@@ -60,4 +61,15 @@ function filament_panel_middleware(Panel $panel): Panel
         ->authMiddleware([
             Authenticate::class,
         ]);
+}
+function filament_panel_cybersecurity(Panel $panel): Panel
+{
+    return $panel
+        // ...
+        ->plugin(
+            FilamentCybersecurityPlugin::make()
+                ->navigationGroup('Seguridad')
+                ->navigationLabel('Cybersecurity Dashboard')
+                ->permission('view_cybersecurity') // optional Gate / Shield
+        );
 }
