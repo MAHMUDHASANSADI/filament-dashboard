@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+//use Laravel\Boost\Boost;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        //Boost::registerAgent('customagent', CustomAgent::class);
     }
 }
